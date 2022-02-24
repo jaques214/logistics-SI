@@ -1,0 +1,226 @@
+\hypertarget{gestao__utilizadores_8c}{}\doxysection{Referência ao ficheiro My\+Libs/gestao\+\_\+utilizadores.c}
+\label{gestao__utilizadores_8c}\index{MyLibs/gestao\_utilizadores.c@{MyLibs/gestao\_utilizadores.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+utilizadores.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gestao__utilizadores_8c_a5667088bc817a0102d492e10748f0dbc}{pesquisa}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_a6c74591de3ccef8573037faee5b308c3}{dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int $\ast$pos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_a0f62832f32afe93f9e50b82e16c96e62}{adicionar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$ap\+\_\+clientes, int $\ast$n\+Elementos, int $\ast$tam\+\_\+max\+\_\+cli, int nif)
+\item 
+struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ \mbox{\hyperlink{gestao__utilizadores_8c_ae66a53cfcc62a5fbafe47f58b90b4b03}{get\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_a211f4536a9b519a5cb58e1de8dc8f34e}{editar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_aedd0aaab2ab4e4e493ee4d050fd2115f}{remove\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_a1b55c3e63c9b858522961ae7ccef40ba}{ativar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_a96f5490ef3e5d86aee0c01d935c78f39}{guardar\+Dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8c_afa2161669e7cf34001d77a89646948a8}{carregar\+Dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$ap\+\_\+clientes, int $\ast$n\+Elementos, int $\ast$tam\+\_\+max\+\_\+cli)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{gestao__utilizadores_8c_a0f62832f32afe93f9e50b82e16c96e62}\label{gestao__utilizadores_8c_a0f62832f32afe93f9e50b82e16c96e62}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!adicionarCliente@{adicionarCliente}}
+\index{adicionarCliente@{adicionarCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{adicionarCliente()}{adicionarCliente()}}
+{\footnotesize\ttfamily void adicionar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+cli,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Adiciona um cliente à lista de clientes, se possível
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & apontador duplo para o endereço do primeiro cliente da lista \\
+\hline
+{\em n\+Elementos} & apontador para o número de clientes que existem atualmente no array \\
+\hline
+{\em tam\+\_\+max\+\_\+cli} & apontador para o tamanho do array clientes \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 64 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_a1b55c3e63c9b858522961ae7ccef40ba}\label{gestao__utilizadores_8c_a1b55c3e63c9b858522961ae7ccef40ba}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!ativarCliente@{ativarCliente}}
+\index{ativarCliente@{ativarCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{ativarCliente()}{ativarCliente()}}
+{\footnotesize\ttfamily void ativar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Reativa o cliente depois o ter o removido/desativado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de cliente \\
+\hline
+{\em n\+Elementos} & nº de elementos no array clientes \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 177 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_afa2161669e7cf34001d77a89646948a8}\label{gestao__utilizadores_8c_afa2161669e7cf34001d77a89646948a8}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!carregarDadosCliente@{carregarDadosCliente}}
+\index{carregarDadosCliente@{carregarDadosCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{carregarDadosCliente()}{carregarDadosCliente()}}
+{\footnotesize\ttfamily void carregar\+Dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+cli }\end{DoxyParamCaption})}
+
+Lê dados de um ficheiro (se existir) e preenche a lista de clientes e o seu número
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & um apontador duplo para o endereço de memória do primeiro cliente a preencher \\
+\hline
+{\em n\+Elementos} & um apontador para o nº de clientes que existem na lista \\
+\hline
+{\em tam\+\_\+max\+\_\+cli} & um apontador para o tamanho do array clientes \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 225 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_a6c74591de3ccef8573037faee5b308c3}\label{gestao__utilizadores_8c_a6c74591de3ccef8573037faee5b308c3}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!dadosCliente@{dadosCliente}}
+\index{dadosCliente@{dadosCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{dadosCliente()}{dadosCliente()}}
+{\footnotesize\ttfamily void dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{pos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Lê os dados do cliente e guarda numa determinada posição da lista
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em pos} & a posição em que o novo elemento vai ser inserido \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 41 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_a211f4536a9b519a5cb58e1de8dc8f34e}\label{gestao__utilizadores_8c_a211f4536a9b519a5cb58e1de8dc8f34e}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!editarCliente@{editarCliente}}
+\index{editarCliente@{editarCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{editarCliente()}{editarCliente()}}
+{\footnotesize\ttfamily void editar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Edita a informação do um cliente, se existir
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a editar \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 128 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_ae66a53cfcc62a5fbafe47f58b90b4b03}\label{gestao__utilizadores_8c_ae66a53cfcc62a5fbafe47f58b90b4b03}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!getCliente@{getCliente}}
+\index{getCliente@{getCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{getCliente()}{getCliente()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_cliente}{Cliente}}$\ast$ get\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve um apontador para o cliente com o nif dado, se existir
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº elementos no array clientes \\
+\hline
+{\em nif} & identificador do cliente a obter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+um apontador para o cliente, ou N\+U\+LL se não existir
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondição}
+precisa de ter a função pesquisa declarada antes 
+\end{DoxyPrecond}
+
+
+Definido na linha 108 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_a96f5490ef3e5d86aee0c01d935c78f39}\label{gestao__utilizadores_8c_a96f5490ef3e5d86aee0c01d935c78f39}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!guardarDadosCliente@{guardarDadosCliente}}
+\index{guardarDadosCliente@{guardarDadosCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{guardarDadosCliente()}{guardarDadosCliente()}}
+{\footnotesize\ttfamily void guardar\+Dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos }\end{DoxyParamCaption})}
+
+Escreve o conteúdo da lista de clientes em ficheiro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & um apontador para o primeiro cliente da lista \\
+\hline
+{\em n\+Elementos} & nº de clientes que existem na lista \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 200 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_a5667088bc817a0102d492e10748f0dbc}\label{gestao__utilizadores_8c_a5667088bc817a0102d492e10748f0dbc}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!pesquisa@{pesquisa}}
+\index{pesquisa@{pesquisa}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{pesquisa()}{pesquisa()}}
+{\footnotesize\ttfamily int pesquisa (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve a posição em que ocorre o cliente com o nif dado 
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a pesquisar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+índice do cliente, se existir, ou -\/1 caso contrário 
+\end{DoxyReturn}
+
+
+Definido na linha 18 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8c_aedd0aaab2ab4e4e493ee4d050fd2115f}\label{gestao__utilizadores_8c_aedd0aaab2ab4e4e493ee4d050fd2115f}} 
+\index{gestao\_utilizadores.c@{gestao\_utilizadores.c}!removeCliente@{removeCliente}}
+\index{removeCliente@{removeCliente}!gestao\_utilizadores.c@{gestao\_utilizadores.c}}
+\doxysubsubsection{\texorpdfstring{removeCliente()}{removeCliente()}}
+{\footnotesize\ttfamily void remove\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Remove o cliente, mudando o seu estado para desativo, se estiver ativo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a remover/desativar \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 153 do ficheiro gestao\+\_\+utilizadores.\+c.
+

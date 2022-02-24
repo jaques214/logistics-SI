@@ -1,0 +1,53 @@
+\hypertarget{_a_p_i___utils_8h}{}\doxysection{Referência ao ficheiro A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Utils.h}
+\label{_a_p_i___utils_8h}\index{API\_Leitura/API\_Utils.h@{API\_Leitura/API\_Utils.h}}
+
+
+Biblioteca para operações diversas.  
+
+
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_i___utils_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o buffer de entrada de dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Biblioteca para operações diversas. 
+
+\begin{DoxyAuthor}{Autor}
+E\+S\+T\+G\+F.\+LP
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Aviso}
+Esta biblioteca pretende ser uma base de trabalho. Caso pretenda pode melhorar ou acrescentar novas funcionalidades de acordo com o objectivo
+\end{DoxyWarning}
+\begin{DoxyDate}{Data}
+2013-\/02-\/01 14\+:00 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{_a_p_i___utils_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}\label{_a_p_i___utils_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}} 
+\index{API\_Utils.h@{API\_Utils.h}!cleanInputBuffer@{cleanInputBuffer}}
+\index{cleanInputBuffer@{cleanInputBuffer}!API\_Utils.h@{API\_Utils.h}}
+\doxysubsubsection{\texorpdfstring{cleanInputBuffer()}{cleanInputBuffer()}}
+{\footnotesize\ttfamily void clean\+Input\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa o buffer de entrada de dados. 
+
+\begin{DoxyWarning}{Aviso}
+Caso não exista nenhuma informação no buffer, o programa pode ficar a aguardar que exista informação no buffer.
+\end{DoxyWarning}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} car:}
+\DoxyCodeLine{}
+\DoxyCodeLine{car = getchar();}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___utils_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\end{DoxyCode}
+ 
+
+Definido na linha 23 do ficheiro A\+P\+I\+\_\+\+Utils.\+c.
+

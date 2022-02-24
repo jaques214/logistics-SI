@@ -1,0 +1,392 @@
+\hypertarget{gestao__utilizadores_8h}{}\doxysection{Referência ao ficheiro My\+Libs/gestao\+\_\+utilizadores.h}
+\label{gestao__utilizadores_8h}\index{MyLibs/gestao\_utilizadores.h@{MyLibs/gestao\_utilizadores.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_artigo}{Artigo}}
+\item 
+struct \mbox{\hyperlink{struct_morada}{Morada}}
+\item 
+struct \mbox{\hyperlink{struct_cliente}{Cliente}}
+\item 
+struct \mbox{\hyperlink{struct_encomenda}{Encomenda}}
+\item 
+struct \mbox{\hyperlink{struct_preco}{Preco}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gestao__utilizadores_8h_ae4c997214b107810e8b9c26974af9f97}{T\+A\+M\+\_\+\+S\+TR}}~100
+\item 
+\#define \mbox{\hyperlink{gestao__utilizadores_8h_afe6861715594da83296ce5c43b886013}{T\+A\+M\+\_\+\+I\+N\+I\+C\+I\+AL}}~1
+\item 
+\#define \mbox{\hyperlink{gestao__utilizadores_8h_a53ad4091711365bfe2802d82bbf1de5d}{T\+A\+M\+\_\+\+I\+N\+C\+R\+E\+M\+E\+N\+TO}}~1
+\item 
+\#define \mbox{\hyperlink{gestao__utilizadores_8h_a4ae4d812904843b806f274aa63710fa0}{T\+A\+M\+\_\+\+D\+E\+C\+R\+E\+M\+E\+N\+TO}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656b}{Decricao}} \{ \mbox{\hyperlink{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4}{N\+Fragil}}, 
+\mbox{\hyperlink{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce}{Fragil}}
+ \}
+\item 
+enum \mbox{\hyperlink{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} \{ \mbox{\hyperlink{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a}{Desativo}}, 
+\mbox{\hyperlink{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b}{Ativo}}
+ \}
+\item 
+enum \mbox{\hyperlink{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155a}{Tipo}} \{ \mbox{\hyperlink{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b}{Regular}}, 
+\mbox{\hyperlink{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c}{Urgente}}
+ \}
+\item 
+enum \mbox{\hyperlink{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394f}{Expedicao}} \{ \mbox{\hyperlink{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7}{N\+Expedida}}, 
+\mbox{\hyperlink{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6}{Expedida}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gestao__utilizadores_8h_a5667088bc817a0102d492e10748f0dbc}{pesquisa}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_a6c74591de3ccef8573037faee5b308c3}{dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int $\ast$pos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_a0f62832f32afe93f9e50b82e16c96e62}{adicionar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$ap\+\_\+clientes, int $\ast$n\+Elementos, int $\ast$tam\+\_\+max\+\_\+cli, int nif)
+\item 
+struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ \mbox{\hyperlink{gestao__utilizadores_8h_ae66a53cfcc62a5fbafe47f58b90b4b03}{get\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_a211f4536a9b519a5cb58e1de8dc8f34e}{editar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_aedd0aaab2ab4e4e493ee4d050fd2115f}{remove\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_a1b55c3e63c9b858522961ae7ccef40ba}{ativar\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int nif)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_a96f5490ef3e5d86aee0c01d935c78f39}{guardar\+Dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos)
+\item 
+void \mbox{\hyperlink{gestao__utilizadores_8h_afa2161669e7cf34001d77a89646948a8}{carregar\+Dados\+Cliente}} (struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$ap\+\_\+clientes, int $\ast$n\+Elementos, int $\ast$tam\+\_\+max\+\_\+cli)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das macros}
+\mbox{\Hypertarget{gestao__utilizadores_8h_a4ae4d812904843b806f274aa63710fa0}\label{gestao__utilizadores_8h_a4ae4d812904843b806f274aa63710fa0}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!TAM\_DECREMENTO@{TAM\_DECREMENTO}}
+\index{TAM\_DECREMENTO@{TAM\_DECREMENTO}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{TAM\_DECREMENTO}{TAM\_DECREMENTO}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+D\+E\+C\+R\+E\+M\+E\+N\+TO~1}
+
+
+
+Definido na linha 22 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a53ad4091711365bfe2802d82bbf1de5d}\label{gestao__utilizadores_8h_a53ad4091711365bfe2802d82bbf1de5d}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!TAM\_INCREMENTO@{TAM\_INCREMENTO}}
+\index{TAM\_INCREMENTO@{TAM\_INCREMENTO}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{TAM\_INCREMENTO}{TAM\_INCREMENTO}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+I\+N\+C\+R\+E\+M\+E\+N\+TO~1}
+
+
+
+Definido na linha 21 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_afe6861715594da83296ce5c43b886013}\label{gestao__utilizadores_8h_afe6861715594da83296ce5c43b886013}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!TAM\_INICIAL@{TAM\_INICIAL}}
+\index{TAM\_INICIAL@{TAM\_INICIAL}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{TAM\_INICIAL}{TAM\_INICIAL}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+I\+N\+I\+C\+I\+AL~1}
+
+
+
+Definido na linha 20 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_ae4c997214b107810e8b9c26974af9f97}\label{gestao__utilizadores_8h_ae4c997214b107810e8b9c26974af9f97}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!TAM\_STR@{TAM\_STR}}
+\index{TAM\_STR@{TAM\_STR}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{TAM\_STR}{TAM\_STR}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+S\+TR~100}
+
+
+
+Definido na linha 19 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+
+
+\doxysubsection{Documentação dos valores da enumeração}
+\mbox{\Hypertarget{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656b}\label{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656b}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Decricao@{Decricao}}
+\index{Decricao@{Decricao}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{Decricao}{Decricao}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656b}{Decricao}}}
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NFragil@{NFragil}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!NFragil@{NFragil}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4}\label{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4}} 
+N\+Fragil&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fragil@{Fragil}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Fragil@{Fragil}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce}\label{gestao__utilizadores_8h_a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce}} 
+Fragil&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definido na linha 24 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394f}\label{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394f}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Expedicao@{Expedicao}}
+\index{Expedicao@{Expedicao}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{Expedicao}{Expedicao}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394f}{Expedicao}}}
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NExpedida@{NExpedida}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!NExpedida@{NExpedida}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7}\label{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7}} 
+N\+Expedida&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Expedida@{Expedida}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Expedida@{Expedida}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6}\label{gestao__utilizadores_8h_a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6}} 
+Expedida&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definido na linha 27 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}\label{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Status@{Status}}
+\index{Status@{Status}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}}}
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Desativo@{Desativo}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Desativo@{Desativo}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a}\label{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a}} 
+Desativo&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ativo@{Ativo}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Ativo@{Ativo}}}\mbox{\Hypertarget{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b}\label{gestao__utilizadores_8h_a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b}} 
+Ativo&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definido na linha 25 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155a}\label{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155a}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Tipo@{Tipo}}
+\index{Tipo@{Tipo}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{Tipo}{Tipo}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155a}{Tipo}}}
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Regular@{Regular}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Regular@{Regular}}}\mbox{\Hypertarget{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b}\label{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b}} 
+Regular&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Urgente@{Urgente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!Urgente@{Urgente}}}\mbox{\Hypertarget{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c}\label{gestao__utilizadores_8h_adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c}} 
+Urgente&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definido na linha 26 do ficheiro gestao\+\_\+utilizadores.\+h.
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{gestao__utilizadores_8h_a0f62832f32afe93f9e50b82e16c96e62}\label{gestao__utilizadores_8h_a0f62832f32afe93f9e50b82e16c96e62}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!adicionarCliente@{adicionarCliente}}
+\index{adicionarCliente@{adicionarCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{adicionarCliente()}{adicionarCliente()}}
+{\footnotesize\ttfamily void adicionar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+cli,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Adiciona um cliente à lista de clientes, se possível
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & apontador duplo para o endereço do primeiro cliente da lista \\
+\hline
+{\em n\+Elementos} & apontador para o número de clientes que existem atualmente no array \\
+\hline
+{\em tam\+\_\+max\+\_\+cli} & apontador para o tamanho do array clientes \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 64 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a1b55c3e63c9b858522961ae7ccef40ba}\label{gestao__utilizadores_8h_a1b55c3e63c9b858522961ae7ccef40ba}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!ativarCliente@{ativarCliente}}
+\index{ativarCliente@{ativarCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{ativarCliente()}{ativarCliente()}}
+{\footnotesize\ttfamily void ativar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Reativa o cliente depois o ter o removido/desativado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de cliente \\
+\hline
+{\em n\+Elementos} & nº de elementos no array clientes \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 177 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_afa2161669e7cf34001d77a89646948a8}\label{gestao__utilizadores_8h_afa2161669e7cf34001d77a89646948a8}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!carregarDadosCliente@{carregarDadosCliente}}
+\index{carregarDadosCliente@{carregarDadosCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{carregarDadosCliente()}{carregarDadosCliente()}}
+{\footnotesize\ttfamily void carregar\+Dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$$\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+cli }\end{DoxyParamCaption})}
+
+Lê dados de um ficheiro (se existir) e preenche a lista de clientes e o seu número
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & um apontador duplo para o endereço de memória do primeiro cliente a preencher \\
+\hline
+{\em n\+Elementos} & um apontador para o nº de clientes que existem na lista \\
+\hline
+{\em tam\+\_\+max\+\_\+cli} & um apontador para o tamanho do array clientes \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 225 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a6c74591de3ccef8573037faee5b308c3}\label{gestao__utilizadores_8h_a6c74591de3ccef8573037faee5b308c3}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!dadosCliente@{dadosCliente}}
+\index{dadosCliente@{dadosCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{dadosCliente()}{dadosCliente()}}
+{\footnotesize\ttfamily void dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{pos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Lê os dados do cliente e guarda numa determinada posição da lista
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em pos} & a posição em que o novo elemento vai ser inserido \\
+\hline
+{\em nif} & identificador do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 41 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a211f4536a9b519a5cb58e1de8dc8f34e}\label{gestao__utilizadores_8h_a211f4536a9b519a5cb58e1de8dc8f34e}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!editarCliente@{editarCliente}}
+\index{editarCliente@{editarCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{editarCliente()}{editarCliente()}}
+{\footnotesize\ttfamily void editar\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Edita a informação do um cliente, se existir
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a editar \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 128 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_ae66a53cfcc62a5fbafe47f58b90b4b03}\label{gestao__utilizadores_8h_ae66a53cfcc62a5fbafe47f58b90b4b03}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!getCliente@{getCliente}}
+\index{getCliente@{getCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{getCliente()}{getCliente()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_cliente}{Cliente}}$\ast$ get\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve um apontador para o cliente com o nif dado, se existir
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº elementos no array clientes \\
+\hline
+{\em nif} & identificador do cliente a obter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+um apontador para o cliente, ou N\+U\+LL se não existir
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondição}
+precisa de ter a função pesquisa declarada antes 
+\end{DoxyPrecond}
+
+
+Definido na linha 108 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a96f5490ef3e5d86aee0c01d935c78f39}\label{gestao__utilizadores_8h_a96f5490ef3e5d86aee0c01d935c78f39}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!guardarDadosCliente@{guardarDadosCliente}}
+\index{guardarDadosCliente@{guardarDadosCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{guardarDadosCliente()}{guardarDadosCliente()}}
+{\footnotesize\ttfamily void guardar\+Dados\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos }\end{DoxyParamCaption})}
+
+Escreve o conteúdo da lista de clientes em ficheiro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & um apontador para o primeiro cliente da lista \\
+\hline
+{\em n\+Elementos} & nº de clientes que existem na lista \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 200 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_a5667088bc817a0102d492e10748f0dbc}\label{gestao__utilizadores_8h_a5667088bc817a0102d492e10748f0dbc}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!pesquisa@{pesquisa}}
+\index{pesquisa@{pesquisa}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{pesquisa()}{pesquisa()}}
+{\footnotesize\ttfamily int pesquisa (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve a posição em que ocorre o cliente com o nif dado 
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a pesquisar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+índice do cliente, se existir, ou -\/1 caso contrário 
+\end{DoxyReturn}
+
+
+Definido na linha 18 do ficheiro gestao\+\_\+utilizadores.\+c.
+
+\mbox{\Hypertarget{gestao__utilizadores_8h_aedd0aaab2ab4e4e493ee4d050fd2115f}\label{gestao__utilizadores_8h_aedd0aaab2ab4e4e493ee4d050fd2115f}} 
+\index{gestao\_utilizadores.h@{gestao\_utilizadores.h}!removeCliente@{removeCliente}}
+\index{removeCliente@{removeCliente}!gestao\_utilizadores.h@{gestao\_utilizadores.h}}
+\doxysubsubsection{\texorpdfstring{removeCliente()}{removeCliente()}}
+{\footnotesize\ttfamily void remove\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Remove o cliente, mudando o seu estado para desativo, se estiver ativo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Elementos} & nº de clientes no array \\
+\hline
+{\em nif} & identificador do cliente a remover/desativar \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 153 do ficheiro gestao\+\_\+utilizadores.\+c.
+

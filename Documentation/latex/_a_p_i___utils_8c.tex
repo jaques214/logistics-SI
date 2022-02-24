@@ -1,0 +1,87 @@
+\hypertarget{_a_p_i___utils_8c}{}\doxysection{Referência ao ficheiro A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Utils.c}
+\label{_a_p_i___utils_8c}\index{API\_Leitura/API\_Utils.c@{API\_Leitura/API\_Utils.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_a_p_i___utils_8c_a7d5d2e288aec885a6834d878316a17a9}{M\+S\+G\+\_\+\+P\+A\+U\+S\+A\+\_\+\+T\+E\+C\+LA}}~\char`\"{}Prima \mbox{[}Enter\mbox{]} para continuar!!\char`\"{}
+\begin{DoxyCompactList}\small\item\em Mensagem a informar o utilizador para pressionar uma tecla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_i___utils_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o buffer de entrada de dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{_a_p_i___utils_8c_a4184040fc33a42217f0b81663b8daefd}{C\+A\+R\+\_\+\+N\+O\+V\+A\+\_\+\+L\+I\+N\+HA}} = \textquotesingle{}\textbackslash{}n\textquotesingle{}
+\item 
+const char \mbox{\hyperlink{_a_p_i___utils_8c_acf2227809328e7d12ca39d930d59acf3}{C\+A\+R\+\_\+\+F\+R\+A\+S\+E\+\_\+\+F\+IM}} = \textquotesingle{}\textbackslash{}0\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das macros}
+\mbox{\Hypertarget{_a_p_i___utils_8c_a7d5d2e288aec885a6834d878316a17a9}\label{_a_p_i___utils_8c_a7d5d2e288aec885a6834d878316a17a9}} 
+\index{API\_Utils.c@{API\_Utils.c}!MSG\_PAUSA\_TECLA@{MSG\_PAUSA\_TECLA}}
+\index{MSG\_PAUSA\_TECLA@{MSG\_PAUSA\_TECLA}!API\_Utils.c@{API\_Utils.c}}
+\doxysubsubsection{\texorpdfstring{MSG\_PAUSA\_TECLA}{MSG\_PAUSA\_TECLA}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+P\+A\+U\+S\+A\+\_\+\+T\+E\+C\+LA~\char`\"{}Prima \mbox{[}Enter\mbox{]} para continuar!!\char`\"{}}
+
+
+
+Mensagem a informar o utilizador para pressionar uma tecla. 
+
+
+
+Definido na linha 5 do ficheiro A\+P\+I\+\_\+\+Utils.\+c.
+
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{_a_p_i___utils_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}\label{_a_p_i___utils_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}} 
+\index{API\_Utils.c@{API\_Utils.c}!cleanInputBuffer@{cleanInputBuffer}}
+\index{cleanInputBuffer@{cleanInputBuffer}!API\_Utils.c@{API\_Utils.c}}
+\doxysubsubsection{\texorpdfstring{cleanInputBuffer()}{cleanInputBuffer()}}
+{\footnotesize\ttfamily void clean\+Input\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa o buffer de entrada de dados. 
+
+\begin{DoxyWarning}{Aviso}
+Caso não exista nenhuma informação no buffer, o programa pode ficar a aguardar que exista informação no buffer.
+\end{DoxyWarning}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} car:}
+\DoxyCodeLine{}
+\DoxyCodeLine{car = getchar();}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___utils_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\end{DoxyCode}
+ 
+
+Definido na linha 23 do ficheiro A\+P\+I\+\_\+\+Utils.\+c.
+
+
+
+\doxysubsection{Documentação das variáveis}
+\mbox{\Hypertarget{_a_p_i___utils_8c_acf2227809328e7d12ca39d930d59acf3}\label{_a_p_i___utils_8c_acf2227809328e7d12ca39d930d59acf3}} 
+\index{API\_Utils.c@{API\_Utils.c}!CAR\_FRASE\_FIM@{CAR\_FRASE\_FIM}}
+\index{CAR\_FRASE\_FIM@{CAR\_FRASE\_FIM}!API\_Utils.c@{API\_Utils.c}}
+\doxysubsubsection{\texorpdfstring{CAR\_FRASE\_FIM}{CAR\_FRASE\_FIM}}
+{\footnotesize\ttfamily const char C\+A\+R\+\_\+\+F\+R\+A\+S\+E\+\_\+\+F\+IM = \textquotesingle{}\textbackslash{}0\textquotesingle{}}
+
+
+
+Definido na linha 8 do ficheiro A\+P\+I\+\_\+\+Utils.\+c.
+
+\mbox{\Hypertarget{_a_p_i___utils_8c_a4184040fc33a42217f0b81663b8daefd}\label{_a_p_i___utils_8c_a4184040fc33a42217f0b81663b8daefd}} 
+\index{API\_Utils.c@{API\_Utils.c}!CAR\_NOVA\_LINHA@{CAR\_NOVA\_LINHA}}
+\index{CAR\_NOVA\_LINHA@{CAR\_NOVA\_LINHA}!API\_Utils.c@{API\_Utils.c}}
+\doxysubsubsection{\texorpdfstring{CAR\_NOVA\_LINHA}{CAR\_NOVA\_LINHA}}
+{\footnotesize\ttfamily const char C\+A\+R\+\_\+\+N\+O\+V\+A\+\_\+\+L\+I\+N\+HA = \textquotesingle{}\textbackslash{}n\textquotesingle{}}
+
+
+
+Definido na linha 7 do ficheiro A\+P\+I\+\_\+\+Utils.\+c.
+

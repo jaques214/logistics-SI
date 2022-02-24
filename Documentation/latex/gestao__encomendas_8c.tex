@@ -1,0 +1,264 @@
+\hypertarget{gestao__encomendas_8c}{}\doxysection{Referência ao ficheiro My\+Libs/gestao\+\_\+encomendas.c}
+\label{gestao__encomendas_8c}\index{MyLibs/gestao\_encomendas.c@{MyLibs/gestao\_encomendas.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+utilizadores.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+encomendas.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gestao__encomendas_8c_aae1e54580228f6814ba27e073162c027}{pesquisa\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, int nif)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_a6909fc38dcf1b71eaf67b4dfd00ddd11}{calcular\+Total}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int pos, struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_a80c1d98e5a88f6713e50fce7283bb83b}{dados\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int $\ast$pos, int $\ast$n\+Elementos, int nif, struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_ad77609ba1ce1277ad33d8bc0ba4927d6}{adicionar\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$ap\+\_\+encomendas, struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos, struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int $\ast$n\+Encomendas, int $\ast$n\+Elementos, int $\ast$tam\+\_\+max\+\_\+enc, int nif)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_a4d039cdbf8467781652633c08eb14d1f}{consultar\+Estado}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, int nif)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_a26789300fd1ed90e0ea851c7b2de93b4}{alterar\+Estado}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int pos)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_ac382449920a6c7a3956bc2e5d29b9b77}{remover\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$ap\+\_\+encomendas, int $\ast$n\+Encomendas, int $\ast$tam\+\_\+max\+\_\+enc)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_a123d060d6c702fc7c8231a68e296d184}{alterar\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$ap\+\_\+encomendas, int n\+Encomendas, int nifcliente, struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_ac3baf55c96263ece4941a703540e193d}{guardar\+Dados\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas)
+\item 
+void \mbox{\hyperlink{gestao__encomendas_8c_add00ba1b87b7d00b4d60296e00e48fe7}{carregar\+Dados\+Encomenda}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$ap\+\_\+encomendas, int $\ast$n\+Encomendas, int $\ast$tam\+\_\+max\+\_\+enc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{gestao__encomendas_8c_ad77609ba1ce1277ad33d8bc0ba4927d6}\label{gestao__encomendas_8c_ad77609ba1ce1277ad33d8bc0ba4927d6}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!adicionarEncomenda@{adicionarEncomenda}}
+\index{adicionarEncomenda@{adicionarEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{adicionarEncomenda()}{adicionarEncomenda()}}
+{\footnotesize\ttfamily void adicionar\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$}]{ap\+\_\+encomendas,  }\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos,  }\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{n\+Encomendas,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+enc,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Adiciona uma ou mais encomendas à lista de encomendas, juntamente com os artigos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & apontador duplo para o endereço da primeira encomenda da lista \\
+\hline
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em n\+Encomendas} & apontador para o número de encomendas que existem atualmente no array \\
+\hline
+{\em n\+Elementos} & apontador para o número de clientes que existem atualmente no array \\
+\hline
+{\em tam\+\_\+max\+\_\+enc} & apontador para o tamanho do array encomendas \\
+\hline
+{\em nif} & identificador do cliente, que adiciona a encomenda \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 181 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_a123d060d6c702fc7c8231a68e296d184}\label{gestao__encomendas_8c_a123d060d6c702fc7c8231a68e296d184}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!alterarEncomenda@{alterarEncomenda}}
+\index{alterarEncomenda@{alterarEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{alterarEncomenda()}{alterarEncomenda()}}
+{\footnotesize\ttfamily void alterar\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nifcliente,  }\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Altera a informação da encomenda ou adiciona, edita e remove artigos
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & apontador duplo para o endereço do array encomenda \\
+\hline
+{\em n\+Encomendas} & o nº de encomendas no array \\
+\hline
+{\em nifcliente} & identificador do cliente, que efetuou a encomenda \\
+\hline
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 356 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_a26789300fd1ed90e0ea851c7b2de93b4}\label{gestao__encomendas_8c_a26789300fd1ed90e0ea851c7b2de93b4}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!alterarEstado@{alterarEstado}}
+\index{alterarEstado@{alterarEstado}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{alterarEstado()}{alterarEstado()}}
+{\footnotesize\ttfamily void alterar\+Estado (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+Altera o estado da encomenda para expedida, fornecendo a data/hora de envio
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em pos} & a posicao atual do array encomendas \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 297 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_a6909fc38dcf1b71eaf67b4dfd00ddd11}\label{gestao__encomendas_8c_a6909fc38dcf1b71eaf67b4dfd00ddd11}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!calcularTotal@{calcularTotal}}
+\index{calcularTotal@{calcularTotal}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{calcularTotal()}{calcularTotal()}}
+{\footnotesize\ttfamily void calcular\+Total (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{pos,  }\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Calcula o custo total através do produto entre dados da encomenda e o somatório dos preços
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em pos} & a posição em que o novo elemento vai ser inserido \\
+\hline
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 49 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_add00ba1b87b7d00b4d60296e00e48fe7}\label{gestao__encomendas_8c_add00ba1b87b7d00b4d60296e00e48fe7}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!carregarDadosEncomenda@{carregarDadosEncomenda}}
+\index{carregarDadosEncomenda@{carregarDadosEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{carregarDadosEncomenda()}{carregarDadosEncomenda()}}
+{\footnotesize\ttfamily void carregar\+Dados\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$}]{ap\+\_\+encomendas,  }\item[{int $\ast$}]{n\+Encomendas,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+enc }\end{DoxyParamCaption})}
+
+Lê dados de um ficheiro (se existir) e preenche a lista de encomendas e o seu número
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & um apontador duplo para o endereço de memória da primeira encomenda a preencher \\
+\hline
+{\em n\+Encomendas} & um apontador para o nº de encomendas que existem na lista \\
+\hline
+{\em tam\+\_\+max\+\_\+enc} & um apontador para o tamanho do array encomendas \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 545 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_a4d039cdbf8467781652633c08eb14d1f}\label{gestao__encomendas_8c_a4d039cdbf8467781652633c08eb14d1f}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!consultarEstado@{consultarEstado}}
+\index{consultarEstado@{consultarEstado}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{consultarEstado()}{consultarEstado()}}
+{\footnotesize\ttfamily void consultar\+Estado (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve todas as encomendas e artigos que um cliente inseriu
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em n\+Encomendas} & nº de encomendas no array \\
+\hline
+{\em nif} & identificador do cliente, que efetuou a encomenda \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 235 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_a80c1d98e5a88f6713e50fce7283bb83b}\label{gestao__encomendas_8c_a80c1d98e5a88f6713e50fce7283bb83b}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!dadosEncomenda@{dadosEncomenda}}
+\index{dadosEncomenda@{dadosEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{dadosEncomenda()}{dadosEncomenda()}}
+{\footnotesize\ttfamily void dados\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int $\ast$}]{pos,  }\item[{int $\ast$}]{n\+Elementos,  }\item[{int}]{nif,  }\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Lê os dados da encomenda e guarda numa determinada posição da lista
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em ap\+\_\+clientes} & array/apontador de clientes \\
+\hline
+{\em pos} & a posição em que o novo elemento vai ser inserido \\
+\hline
+{\em n\+Elementos} & apontador para o nº de clientes no array \\
+\hline
+{\em nif} & indentificador do cliente, que faz a encomenda \\
+\hline
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondição}
+precisa da função get\+Cliente para copiar os dados da morada de origem do cliente na mesma posição que o nif inserido 
+\end{DoxyPrecond}
+
+
+Definido na linha 98 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_ac3baf55c96263ece4941a703540e193d}\label{gestao__encomendas_8c_ac3baf55c96263ece4941a703540e193d}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!guardarDadosEncomenda@{guardarDadosEncomenda}}
+\index{guardarDadosEncomenda@{guardarDadosEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{guardarDadosEncomenda()}{guardarDadosEncomenda()}}
+{\footnotesize\ttfamily void guardar\+Dados\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas }\end{DoxyParamCaption})}
+
+Escreve o conteúdo da lista de encomendas em ficheiro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & um apontador para a primeira encomenda da lista \\
+\hline
+{\em n\+Encomendas} & nº de encomendas que existem na lista \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 515 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_aae1e54580228f6814ba27e073162c027}\label{gestao__encomendas_8c_aae1e54580228f6814ba27e073162c027}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!pesquisaEncomenda@{pesquisaEncomenda}}
+\index{pesquisaEncomenda@{pesquisaEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{pesquisaEncomenda()}{pesquisaEncomenda()}}
+{\footnotesize\ttfamily int pesquisa\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nif }\end{DoxyParamCaption})}
+
+Devolve a posição em que ocorre a encomenda com o nif do cliente dado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em n\+Encomendas} & nº de encomendas no array \\
+\hline
+{\em nif} & identificador do cliente, que efetuou a encomenda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+índice da encomenda, se existir, ou -\/1 caso contrário 
+\end{DoxyReturn}
+
+
+Definido na linha 24 do ficheiro gestao\+\_\+encomendas.\+c.
+
+\mbox{\Hypertarget{gestao__encomendas_8c_ac382449920a6c7a3956bc2e5d29b9b77}\label{gestao__encomendas_8c_ac382449920a6c7a3956bc2e5d29b9b77}} 
+\index{gestao\_encomendas.c@{gestao\_encomendas.c}!removerEncomenda@{removerEncomenda}}
+\index{removerEncomenda@{removerEncomenda}!gestao\_encomendas.c@{gestao\_encomendas.c}}
+\doxysubsubsection{\texorpdfstring{removerEncomenda()}{removerEncomenda()}}
+{\footnotesize\ttfamily void remover\+Encomenda (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$$\ast$}]{ap\+\_\+encomendas,  }\item[{int $\ast$}]{n\+Encomendas,  }\item[{int $\ast$}]{tam\+\_\+max\+\_\+enc }\end{DoxyParamCaption})}
+
+Remove uma encomenda e os seus artigos dado nº da encomenda
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & apontador duplo para o endereço do array encomenda \\
+\hline
+{\em n\+Encomendas} & apontador para o nº de encomendas que existem atualmente no array \\
+\hline
+{\em tam\+\_\+max\+\_\+enc} & apontador para o tamanho do array \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 315 do ficheiro gestao\+\_\+encomendas.\+c.
+

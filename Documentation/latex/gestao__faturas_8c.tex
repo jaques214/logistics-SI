@@ -1,0 +1,44 @@
+\hypertarget{gestao__faturas_8c}{}\doxysection{Referência ao ficheiro My\+Libs/gestao\+\_\+faturas.c}
+\label{gestao__faturas_8c}\index{MyLibs/gestao\_faturas.c@{MyLibs/gestao\_faturas.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+utilizadores.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+faturas.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gestao__faturas_8c_a005ff70aea3c9a82637bff3dafd178e5}{gerar\+Fatura}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, int nif, int mes, int ano, char nome\mbox{[}$\,$\mbox{]}, int rec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{gestao__faturas_8c_a005ff70aea3c9a82637bff3dafd178e5}\label{gestao__faturas_8c_a005ff70aea3c9a82637bff3dafd178e5}} 
+\index{gestao\_faturas.c@{gestao\_faturas.c}!gerarFatura@{gerarFatura}}
+\index{gerarFatura@{gerarFatura}!gestao\_faturas.c@{gestao\_faturas.c}}
+\doxysubsubsection{\texorpdfstring{gerarFatura()}{gerarFatura()}}
+{\footnotesize\ttfamily void gerar\+Fatura (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nif,  }\item[{int}]{mes,  }\item[{int}]{ano,  }\item[{char}]{nome\mbox{[}$\,$\mbox{]},  }\item[{int}]{rec }\end{DoxyParamCaption})}
+
+Imprime as faturas do mês
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador das encomenddas \\
+\hline
+{\em n\+Encomendas} & nº de encomendas no array \\
+\hline
+{\em nif} & identificador do cliente que efetuou a encomenda \\
+\hline
+{\em mes} & valor do mês retirado da data de envio da encomenda \\
+\hline
+{\em ano} & valor do ano retirado da data de envio da encomenda \\
+\hline
+{\em nome} & nome do cliente \\
+\hline
+{\em rec} & valida se o utilizador quer \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 24 do ficheiro gestao\+\_\+faturas.\+c.
+

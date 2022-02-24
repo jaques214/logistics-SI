@@ -1,0 +1,10 @@
+Fatura do mês: 1/2020
+
+NIF: 123
+Encomendas:
+ Encomenda nº1 - 51.36€
+ Hora: 20:0
+  Artigos:
+   Artigo nº1
+------------------------
+Total: 51.36

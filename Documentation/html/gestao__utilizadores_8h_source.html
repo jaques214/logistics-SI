@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho de Grupo - LP: Código-Fonte de MyLibs/gestao_utilizadores.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho de Grupo - LP
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gestao__utilizadores_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gestao_utilizadores.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gestao__utilizadores_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * To change this license header, choose License Headers in Project Properties.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * To change this template file, choose Tools | Templates</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * and open the template in the editor.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * File:   gestao_utilizadores.h</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Author: Jaques</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * Created on 11 de Dezembro de 2019, 15:53</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef GESTAO_UTILIZADORES_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define GESTAO_UTILIZADORES_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">   19</a></span>&#160;<span class="preprocessor">    #define TAM_STR 100</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#afe6861715594da83296ce5c43b886013">   20</a></span>&#160;<span class="preprocessor">    #define TAM_INICIAL 1</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#a53ad4091711365bfe2802d82bbf1de5d">   21</a></span>&#160;<span class="preprocessor">    #define TAM_INCREMENTO 1</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#a4ae4d812904843b806f274aa63710fa0">   22</a></span>&#160;<span class="preprocessor">    #define TAM_DECREMENTO 1</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4">   24</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656b">Decricao</a> {<a class="code" href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4">NFragil</a>, <a class="code" href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce">Fragil</a>};</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">   25</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> {<a class="code" href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a">Desativo</a>, <a class="code" href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b">Ativo</a>};</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c">   26</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a> {<a class="code" href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b">Regular</a>, <a class="code" href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c">Urgente</a>};</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7">   27</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394f">Expedicao</a> {<a class="code" href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7">NExpedida</a>, <a class="code" href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6">Expedida</a>};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_artigo.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_artigo.html">Artigo</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_artigo.html#ac3626c3cf08dc15298878722556de208">   30</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_artigo.html#ac3626c3cf08dc15298878722556de208">peso</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_artigo.html#a016abda2855c77dcc1630f9d2f9f8d18">   31</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_artigo.html#a016abda2855c77dcc1630f9d2f9f8d18">volume</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_artigo.html#ae0b9aeb51ab09c939a9b68e0c70ad946">   32</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656b">Decricao</a> <a class="code" href="struct_artigo.html#ae0b9aeb51ab09c939a9b68e0c70ad946">descricao</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_morada.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_morada.html">Morada</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_morada.html#ac813aa789c7e3e760d24f72dab8a87f6">   36</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_morada.html#ac813aa789c7e3e760d24f72dab8a87f6">rua</a>[<a class="code" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a>];</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_morada.html#a86cf672daa4e0ad11ad10efc894d19c8">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_morada.html#a86cf672daa4e0ad11ad10efc894d19c8">num</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_morada.html#a03ea586e11441ec4e1117833c894205d">   38</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_morada.html#a03ea586e11441ec4e1117833c894205d">localidade</a>[<a class="code" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a>];</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_morada.html#a8abc2faee65c722ba76be2930e7f642b">   39</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_morada.html#a8abc2faee65c722ba76be2930e7f642b">codPostal</a>[<a class="code" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a>];</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_morada.html#a3192bd6228783f5fd861abcaf530366e">   40</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_morada.html#a3192bd6228783f5fd861abcaf530366e">pais</a>[<a class="code" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a>];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_cliente.html">   43</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_cliente.html">Cliente</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_cliente.html#a98d1020886290eaec630d2cac2ef6d40">   44</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_cliente.html#a98d1020886290eaec630d2cac2ef6d40">nome</a>[<a class="code" href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a>];</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">nif</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_cliente.html#a21aaf27a7ac21de349cae5888fb050a3">   46</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#a21aaf27a7ac21de349cae5888fb050a3">cc</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_cliente.html#ac5ffe8c97145efe9aac9627505b0a4bf">   47</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code" href="struct_cliente.html#ac5ffe8c97145efe9aac9627505b0a4bf">status</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_cliente.html#a1d02ec8609213cc2b277162af04c509c">   48</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_morada.html">Morada</a> <a class="code" href="struct_cliente.html#a1d02ec8609213cc2b277162af04c509c">mpredef</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_encomenda.html">   51</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_encomenda.html">Encomenda</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a5417f374f88da9368dc19e1b5e1c5b05">   52</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_artigo.html">Artigo</a> *<a class="code" href="struct_encomenda.html#a5417f374f88da9368dc19e1b5e1c5b05">artigo</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_encomenda.html#ada94bf63ae451f4a1ac7f215c312d697">   53</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_encomenda.html#ada94bf63ae451f4a1ac7f215c312d697">nartigos</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_encomenda.html#aeaed2ca781f93c549d92b98a97ae7323">   54</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_encomenda.html#aeaed2ca781f93c549d92b98a97ae7323">nifcliente</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a26b79b5c5d268abd697d702a75c6d02a">   55</a></span>&#160;    <span class="keyword">struct </span>tm <a class="code" href="struct_encomenda.html#a26b79b5c5d268abd697d702a75c6d02a">hora_envio</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a1996387ac68363bd6daed8ce374b1fb0">   56</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394f">Expedicao</a> <a class="code" href="struct_encomenda.html#a1996387ac68363bd6daed8ce374b1fb0">expedicao</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_encomenda.html#ac052c3e02c5b9400117bc40add7586d2">   57</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a> <a class="code" href="struct_encomenda.html#ac052c3e02c5b9400117bc40add7586d2">tipo_transporte</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a82ae74a4c8085852e0bfcbea7aed5512">   58</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_encomenda.html#a82ae74a4c8085852e0bfcbea7aed5512">custo_total</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a8fd51870bfd3b92bdf15902b9ae6e87a">   59</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_encomenda.html#a8fd51870bfd3b92bdf15902b9ae6e87a">distancia_km</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_encomenda.html#a2a83ca78a65f90662b7251e560df6a4a">   60</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_morada.html">Morada</a> <a class="code" href="struct_encomenda.html#a2a83ca78a65f90662b7251e560df6a4a">endereco_origem</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="struct_encomenda.html#ae4a30c5fac6dfe0541b4baeb6a7c43b7">   61</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_morada.html">Morada</a> <a class="code" href="struct_encomenda.html#ae4a30c5fac6dfe0541b4baeb6a7c43b7">endereco_destino</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_preco.html">   64</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_preco.html">Preco</a>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_preco.html#a62b7a74a7a8ed7b23893cb6e328e14c4">   65</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a62b7a74a7a8ed7b23893cb6e328e14c4">regular</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_preco.html#a570a4cbe7b847bfaa30360dbbba5807f">   66</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a570a4cbe7b847bfaa30360dbbba5807f">urgente</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_preco.html#ab68095c69b0d739a1baada9640d29be6">   67</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#ab68095c69b0d739a1baada9640d29be6">km</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_preco.html#a58b1612e04329d4d81e1c98b10d37414">   68</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a58b1612e04329d4d81e1c98b10d37414">volumosa</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_preco.html#a01216ed4e594dd7c6ce03d82b2c4c6ea">   69</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a01216ed4e594dd7c6ce03d82b2c4c6ea">fragil</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_preco.html#a69667126891843b34b90aafc3b24e464">   70</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a69667126891843b34b90aafc3b24e464">pesada</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_preco.html#a17e11d3f8c4fff13f42bd49c2f80b64e">   71</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_preco.html#a17e11d3f8c4fff13f42bd49c2f80b64e">codip</a>[9][9];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// Gestão de Utilizadores</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> <a class="code" href="gestao__utilizadores_8h.html#a5667088bc817a0102d492e10748f0dbc">pesquisa</a> (<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos, <span class="keywordtype">int</span> nif);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#a6c74591de3ccef8573037faee5b308c3">dadosCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> *pos, <span class="keywordtype">int</span> nif);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#a0f62832f32afe93f9e50b82e16c96e62">adicionarCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> **ap_clientes, <span class="keywordtype">int</span> *nElementos,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> *tam_max_cli, <span class="keywordtype">int</span> nif);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">struct </span><a class="code" href="struct_cliente.html">Cliente</a>* <a class="code" href="gestao__utilizadores_8h.html#ae66a53cfcc62a5fbafe47f58b90b4b03">getCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos, <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">nif</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#a211f4536a9b519a5cb58e1de8dc8f34e">editarCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos, <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">nif</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#aedd0aaab2ab4e4e493ee4d050fd2115f">removeCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos, <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">nif</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#a1b55c3e63c9b858522961ae7ccef40ba">ativarCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos, <span class="keywordtype">int</span> <a class="code" href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">nif</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#a96f5490ef3e5d86aee0c01d935c78f39">guardarDadosCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> *ap_clientes, <span class="keywordtype">int</span> nElementos);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="gestao__utilizadores_8h.html#afa2161669e7cf34001d77a89646948a8">carregarDadosCliente</a>(<span class="keyword">struct</span> <a class="code" href="struct_cliente.html">Cliente</a> **ap_clientes, <span class="keywordtype">int</span> *nElementos,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">int</span> *tam_max_cli);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GESTAO_UTILIZADORES_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astruct_encomenda_html_ada94bf63ae451f4a1ac7f215c312d697"><div class="ttname"><a href="struct_encomenda.html#ada94bf63ae451f4a1ac7f215c312d697">Encomenda::nartigos</a></div><div class="ttdeci">int nartigos</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00053">gestao_utilizadores.h:53</a></div></div>
+<div class="ttc" id="astruct_artigo_html_ac3626c3cf08dc15298878722556de208"><div class="ttname"><a href="struct_artigo.html#ac3626c3cf08dc15298878722556de208">Artigo::peso</a></div><div class="ttdeci">float peso</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00030">gestao_utilizadores.h:30</a></div></div>
+<div class="ttc" id="astruct_preco_html_a62b7a74a7a8ed7b23893cb6e328e14c4"><div class="ttname"><a href="struct_preco.html#a62b7a74a7a8ed7b23893cb6e328e14c4">Preco::regular</a></div><div class="ttdeci">float regular</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00065">gestao_utilizadores.h:65</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a1996387ac68363bd6daed8ce374b1fb0"><div class="ttname"><a href="struct_encomenda.html#a1996387ac68363bd6daed8ce374b1fb0">Encomenda::expedicao</a></div><div class="ttdeci">enum Expedicao expedicao</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00056">gestao_utilizadores.h:56</a></div></div>
+<div class="ttc" id="astruct_morada_html_a8abc2faee65c722ba76be2930e7f642b"><div class="ttname"><a href="struct_morada.html#a8abc2faee65c722ba76be2930e7f642b">Morada::codPostal</a></div><div class="ttdeci">char codPostal[TAM_STR]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00039">gestao_utilizadores.h:39</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a1b55c3e63c9b858522961ae7ccef40ba"><div class="ttname"><a href="gestao__utilizadores_8h.html#a1b55c3e63c9b858522961ae7ccef40ba">ativarCliente</a></div><div class="ttdeci">void ativarCliente(struct Cliente *ap_clientes, int nElementos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00177">gestao_utilizadores.c:177</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a6c74591de3ccef8573037faee5b308c3"><div class="ttname"><a href="gestao__utilizadores_8h.html#a6c74591de3ccef8573037faee5b308c3">dadosCliente</a></div><div class="ttdeci">void dadosCliente(struct Cliente *ap_clientes, int *pos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00041">gestao_utilizadores.c:41</a></div></div>
+<div class="ttc" id="astruct_artigo_html"><div class="ttname"><a href="struct_artigo.html">Artigo</a></div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00029">gestao_utilizadores.h:29</a></div></div>
+<div class="ttc" id="astruct_preco_html_a570a4cbe7b847bfaa30360dbbba5807f"><div class="ttname"><a href="struct_preco.html#a570a4cbe7b847bfaa30360dbbba5807f">Preco::urgente</a></div><div class="ttdeci">float urgente</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00066">gestao_utilizadores.h:66</a></div></div>
+<div class="ttc" id="astruct_cliente_html_ac5ffe8c97145efe9aac9627505b0a4bf"><div class="ttname"><a href="struct_cliente.html#ac5ffe8c97145efe9aac9627505b0a4bf">Cliente::status</a></div><div class="ttdeci">enum Status status</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00047">gestao_utilizadores.h:47</a></div></div>
+<div class="ttc" id="astruct_preco_html_a17e11d3f8c4fff13f42bd49c2f80b64e"><div class="ttname"><a href="struct_preco.html#a17e11d3f8c4fff13f42bd49c2f80b64e">Preco::codip</a></div><div class="ttdeci">float codip[9][9]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00071">gestao_utilizadores.h:71</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a5667088bc817a0102d492e10748f0dbc"><div class="ttname"><a href="gestao__utilizadores_8h.html#a5667088bc817a0102d492e10748f0dbc">pesquisa</a></div><div class="ttdeci">int pesquisa(struct Cliente *ap_clientes, int nElementos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00018">gestao_utilizadores.c:18</a></div></div>
+<div class="ttc" id="astruct_preco_html"><div class="ttname"><a href="struct_preco.html">Preco</a></div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00064">gestao_utilizadores.h:64</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155a"><div class="ttname"><a href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155a">Tipo</a></div><div class="ttdeci">Tipo</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00026">gestao_utilizadores.h:26</a></div></div>
+<div class="ttc" id="astruct_morada_html"><div class="ttname"><a href="struct_morada.html">Morada</a></div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00035">gestao_utilizadores.h:35</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a26b79b5c5d268abd697d702a75c6d02a"><div class="ttname"><a href="struct_encomenda.html#a26b79b5c5d268abd697d702a75c6d02a">Encomenda::hora_envio</a></div><div class="ttdeci">struct tm hora_envio</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00055">gestao_utilizadores.h:55</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b"><div class="ttname"><a href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70baf08178ded961ed2e84369120217df80b">Ativo</a></div><div class="ttdeci">@ Ativo</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00025">gestao_utilizadores.h:25</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4"><div class="ttname"><a href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656ba52c994595cc5905493a1bf4738c9ced4">NFragil</a></div><div class="ttdeci">@ NFragil</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00024">gestao_utilizadores.h:24</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a5417f374f88da9368dc19e1b5e1c5b05"><div class="ttname"><a href="struct_encomenda.html#a5417f374f88da9368dc19e1b5e1c5b05">Encomenda::artigo</a></div><div class="ttdeci">struct Artigo * artigo</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00052">gestao_utilizadores.h:52</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_ae66a53cfcc62a5fbafe47f58b90b4b03"><div class="ttname"><a href="gestao__utilizadores_8h.html#ae66a53cfcc62a5fbafe47f58b90b4b03">getCliente</a></div><div class="ttdeci">struct Cliente * getCliente(struct Cliente *ap_clientes, int nElementos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00108">gestao_utilizadores.c:108</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_afa2161669e7cf34001d77a89646948a8"><div class="ttname"><a href="gestao__utilizadores_8h.html#afa2161669e7cf34001d77a89646948a8">carregarDadosCliente</a></div><div class="ttdeci">void carregarDadosCliente(struct Cliente **ap_clientes, int *nElementos, int *tam_max_cli)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00225">gestao_utilizadores.c:225</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a211f4536a9b519a5cb58e1de8dc8f34e"><div class="ttname"><a href="gestao__utilizadores_8h.html#a211f4536a9b519a5cb58e1de8dc8f34e">editarCliente</a></div><div class="ttdeci">void editarCliente(struct Cliente *ap_clientes, int nElementos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00128">gestao_utilizadores.c:128</a></div></div>
+<div class="ttc" id="astruct_artigo_html_a016abda2855c77dcc1630f9d2f9f8d18"><div class="ttname"><a href="struct_artigo.html#a016abda2855c77dcc1630f9d2f9f8d18">Artigo::volume</a></div><div class="ttdeci">float volume</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00031">gestao_utilizadores.h:31</a></div></div>
+<div class="ttc" id="astruct_morada_html_a3192bd6228783f5fd861abcaf530366e"><div class="ttname"><a href="struct_morada.html#a3192bd6228783f5fd861abcaf530366e">Morada::pais</a></div><div class="ttdeci">char pais[TAM_STR]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00040">gestao_utilizadores.h:40</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_aedd0aaab2ab4e4e493ee4d050fd2115f"><div class="ttname"><a href="gestao__utilizadores_8h.html#aedd0aaab2ab4e4e493ee4d050fd2115f">removeCliente</a></div><div class="ttdeci">void removeCliente(struct Cliente *ap_clientes, int nElementos, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00153">gestao_utilizadores.c:153</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_ae4a30c5fac6dfe0541b4baeb6a7c43b7"><div class="ttname"><a href="struct_encomenda.html#ae4a30c5fac6dfe0541b4baeb6a7c43b7">Encomenda::endereco_destino</a></div><div class="ttdeci">struct Morada endereco_destino</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00061">gestao_utilizadores.h:61</a></div></div>
+<div class="ttc" id="astruct_cliente_html_a1d02ec8609213cc2b277162af04c509c"><div class="ttname"><a href="struct_cliente.html#a1d02ec8609213cc2b277162af04c509c">Cliente::mpredef</a></div><div class="ttdeci">struct Morada mpredef</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00048">gestao_utilizadores.h:48</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce"><div class="ttname"><a href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656baca1de060dcd23c8d8be26efb159a02ce">Fragil</a></div><div class="ttdeci">@ Fragil</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00024">gestao_utilizadores.h:24</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_ae4c997214b107810e8b9c26974af9f97"><div class="ttname"><a href="gestao__utilizadores_8h.html#ae4c997214b107810e8b9c26974af9f97">TAM_STR</a></div><div class="ttdeci">#define TAM_STR</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00019">gestao_utilizadores.h:19</a></div></div>
+<div class="ttc" id="astruct_morada_html_a86cf672daa4e0ad11ad10efc894d19c8"><div class="ttname"><a href="struct_morada.html#a86cf672daa4e0ad11ad10efc894d19c8">Morada::num</a></div><div class="ttdeci">int num</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00037">gestao_utilizadores.h:37</a></div></div>
+<div class="ttc" id="astruct_artigo_html_ae0b9aeb51ab09c939a9b68e0c70ad946"><div class="ttname"><a href="struct_artigo.html#ae0b9aeb51ab09c939a9b68e0c70ad946">Artigo::descricao</a></div><div class="ttdeci">enum Decricao descricao</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00032">gestao_utilizadores.h:32</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a2a83ca78a65f90662b7251e560df6a4a"><div class="ttname"><a href="struct_encomenda.html#a2a83ca78a65f90662b7251e560df6a4a">Encomenda::endereco_origem</a></div><div class="ttdeci">struct Morada endereco_origem</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00060">gestao_utilizadores.h:60</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6"><div class="ttname"><a href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394fae0e6234e0c3706ab70c0b5368d364ac6">Expedida</a></div><div class="ttdeci">@ Expedida</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00027">gestao_utilizadores.h:27</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a67a0db04d321a74b7e7fcfd3f1a3f70b"><div class="ttname"><a href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00025">gestao_utilizadores.h:25</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_ac052c3e02c5b9400117bc40add7586d2"><div class="ttname"><a href="struct_encomenda.html#ac052c3e02c5b9400117bc40add7586d2">Encomenda::tipo_transporte</a></div><div class="ttdeci">enum Tipo tipo_transporte</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00057">gestao_utilizadores.h:57</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a82ae74a4c8085852e0bfcbea7aed5512"><div class="ttname"><a href="struct_encomenda.html#a82ae74a4c8085852e0bfcbea7aed5512">Encomenda::custo_total</a></div><div class="ttdeci">float custo_total</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00058">gestao_utilizadores.h:58</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7"><div class="ttname"><a href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394fa9a12de6f6e83c8ba016aaadda4c9eeb7">NExpedida</a></div><div class="ttdeci">@ NExpedida</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00027">gestao_utilizadores.h:27</a></div></div>
+<div class="ttc" id="astruct_cliente_html_a21aaf27a7ac21de349cae5888fb050a3"><div class="ttname"><a href="struct_cliente.html#a21aaf27a7ac21de349cae5888fb050a3">Cliente::cc</a></div><div class="ttdeci">int cc</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00046">gestao_utilizadores.h:46</a></div></div>
+<div class="ttc" id="astruct_cliente_html_a98d1020886290eaec630d2cac2ef6d40"><div class="ttname"><a href="struct_cliente.html#a98d1020886290eaec630d2cac2ef6d40">Cliente::nome</a></div><div class="ttdeci">char nome[TAM_STR]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00044">gestao_utilizadores.h:44</a></div></div>
+<div class="ttc" id="astruct_preco_html_a69667126891843b34b90aafc3b24e464"><div class="ttname"><a href="struct_preco.html#a69667126891843b34b90aafc3b24e464">Preco::pesada</a></div><div class="ttdeci">float pesada</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00070">gestao_utilizadores.h:70</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b"><div class="ttname"><a href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa66dfad2fc66aab9e6bb47cfad78b4b6b">Regular</a></div><div class="ttdeci">@ Regular</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00026">gestao_utilizadores.h:26</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_a8fd51870bfd3b92bdf15902b9ae6e87a"><div class="ttname"><a href="struct_encomenda.html#a8fd51870bfd3b92bdf15902b9ae6e87a">Encomenda::distancia_km</a></div><div class="ttdeci">float distancia_km</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00059">gestao_utilizadores.h:59</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a"><div class="ttname"><a href="gestao__utilizadores_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba5740930e3a421ea273979eeadb09199a">Desativo</a></div><div class="ttdeci">@ Desativo</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00025">gestao_utilizadores.h:25</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c"><div class="ttname"><a href="gestao__utilizadores_8h.html#adbc6fd1c40bcc87f0ffb9a41a4a4155aa529dfb754553f5c85dc76de31adb278c">Urgente</a></div><div class="ttdeci">@ Urgente</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00026">gestao_utilizadores.h:26</a></div></div>
+<div class="ttc" id="astruct_preco_html_a01216ed4e594dd7c6ce03d82b2c4c6ea"><div class="ttname"><a href="struct_preco.html#a01216ed4e594dd7c6ce03d82b2c4c6ea">Preco::fragil</a></div><div class="ttdeci">float fragil</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00069">gestao_utilizadores.h:69</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a96f5490ef3e5d86aee0c01d935c78f39"><div class="ttname"><a href="gestao__utilizadores_8h.html#a96f5490ef3e5d86aee0c01d935c78f39">guardarDadosCliente</a></div><div class="ttdeci">void guardarDadosCliente(struct Cliente *ap_clientes, int nElementos)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00200">gestao_utilizadores.c:200</a></div></div>
+<div class="ttc" id="astruct_preco_html_ab68095c69b0d739a1baada9640d29be6"><div class="ttname"><a href="struct_preco.html#ab68095c69b0d739a1baada9640d29be6">Preco::km</a></div><div class="ttdeci">float km</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00067">gestao_utilizadores.h:67</a></div></div>
+<div class="ttc" id="astruct_cliente_html"><div class="ttname"><a href="struct_cliente.html">Cliente</a></div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00043">gestao_utilizadores.h:43</a></div></div>
+<div class="ttc" id="astruct_morada_html_a03ea586e11441ec4e1117833c894205d"><div class="ttname"><a href="struct_morada.html#a03ea586e11441ec4e1117833c894205d">Morada::localidade</a></div><div class="ttdeci">char localidade[TAM_STR]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00038">gestao_utilizadores.h:38</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a26f6ae10dd3b024bde0b9830247c394f"><div class="ttname"><a href="gestao__utilizadores_8h.html#a26f6ae10dd3b024bde0b9830247c394f">Expedicao</a></div><div class="ttdeci">Expedicao</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00027">gestao_utilizadores.h:27</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a299ee0647bf7fcc9d577165c90e0656b"><div class="ttname"><a href="gestao__utilizadores_8h.html#a299ee0647bf7fcc9d577165c90e0656b">Decricao</a></div><div class="ttdeci">Decricao</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00024">gestao_utilizadores.h:24</a></div></div>
+<div class="ttc" id="astruct_encomenda_html"><div class="ttname"><a href="struct_encomenda.html">Encomenda</a></div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00051">gestao_utilizadores.h:51</a></div></div>
+<div class="ttc" id="astruct_morada_html_ac813aa789c7e3e760d24f72dab8a87f6"><div class="ttname"><a href="struct_morada.html#ac813aa789c7e3e760d24f72dab8a87f6">Morada::rua</a></div><div class="ttdeci">char rua[TAM_STR]</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00036">gestao_utilizadores.h:36</a></div></div>
+<div class="ttc" id="agestao__utilizadores_8h_html_a0f62832f32afe93f9e50b82e16c96e62"><div class="ttname"><a href="gestao__utilizadores_8h.html#a0f62832f32afe93f9e50b82e16c96e62">adicionarCliente</a></div><div class="ttdeci">void adicionarCliente(struct Cliente **ap_clientes, int *nElementos, int *tam_max_cli, int nif)</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8c_source.html#l00064">gestao_utilizadores.c:64</a></div></div>
+<div class="ttc" id="astruct_encomenda_html_aeaed2ca781f93c549d92b98a97ae7323"><div class="ttname"><a href="struct_encomenda.html#aeaed2ca781f93c549d92b98a97ae7323">Encomenda::nifcliente</a></div><div class="ttdeci">int nifcliente</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00054">gestao_utilizadores.h:54</a></div></div>
+<div class="ttc" id="astruct_cliente_html_ad68c6985dce5a3d709f854778dedee19"><div class="ttname"><a href="struct_cliente.html#ad68c6985dce5a3d709f854778dedee19">Cliente::nif</a></div><div class="ttdeci">int nif</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00045">gestao_utilizadores.h:45</a></div></div>
+<div class="ttc" id="astruct_preco_html_a58b1612e04329d4d81e1c98b10d37414"><div class="ttname"><a href="struct_preco.html#a58b1612e04329d4d81e1c98b10d37414">Preco::volumosa</a></div><div class="ttdeci">float volumosa</div><div class="ttdef"><b>Definition:</b> <a href="gestao__utilizadores_8h_source.html#l00068">gestao_utilizadores.h:68</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d4b2573a0c19afb61452cc3d00967af1.html">MyLibs</a></li><li class="navelem"><a class="el" href="gestao__utilizadores_8h.html">gestao_utilizadores.h</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

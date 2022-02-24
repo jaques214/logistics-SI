@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Trabalho de Grupo - LP: Código-Fonte de API_Leitura/API_Leitura.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho de Grupo - LP
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_a_p_i___leitura_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">API_Leitura.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_p_i___leitura_8c.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_p_i___utils_8h.html">API_Utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a9dd506a21a68e9b4b5d1c8af496e7b8e">   24</a></span>&#160;<span class="preprocessor">    #define MSG_LEITURA_INT_GAMA_INVALIDA &quot;O numero que introduziu e invalido. Introduza um valor entre %d e %d.\n&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#ad9e0b0234b3a9b40d134a1e0d629713b">   29</a></span>&#160;<span class="preprocessor">    #define MSG_LEITURA_LONG_GAMA_INVALIDA &quot;O numero que introduziu e invalido. Introduza um valor entre %ld e %ld.\n&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a94e80adfb3ac149a05fd29b3fe3aa96d">   34</a></span>&#160;<span class="preprocessor">    #define MSG_LEITURA_REAL_GAMA_INVALIDA &quot;\nO numero que introduziu e invalido. Introduza um valor entre %.3lf e %.3lf.\n&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">   39</a></span>&#160;<span class="preprocessor">    #define MSG_LEITURA_NUMERO_INVALIDO &quot;\nO valor que introduziu nao e um numero valido.\n&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#ab8d0ef2096d87d0b1b4ce2238a194889">   45</a></span>&#160;<span class="preprocessor">    #define MSG_LEITURA_BOOLEANO_INVALIDO &quot;\nO valor que introduziu nao e um numero valido.\n&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> SCANF_ARGUMENTOS_ESPERADOS = 1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="_a_p_i___utils_8c.html#a4184040fc33a42217f0b81663b8daefd">CAR_NOVA_LINHA</a> = <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="_a_p_i___utils_8c.html#acf2227809328e7d12ca39d930d59acf3">CAR_FRASE_FIM</a> = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">   63</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *<span class="keyword">const</span> message){</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        printf(<span class="stringliteral">&quot;\n%s&quot;</span>, message);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">   71</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a>(<span class="keywordtype">short</span> *<span class="keyword">const</span> value) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%hd&quot;</span>, value) != SCANF_ARGUMENTOS_ESPERADOS) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a>); </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#acc0c93038d965dd7f51339cccc038876">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#acc0c93038d965dd7f51339cccc038876">readIntFromStdin</a>(<span class="keywordtype">int</span> *<span class="keyword">const</span> value) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%d&quot;</span>, value) != SCANF_ARGUMENTOS_ESPERADOS) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a>);   </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;   }    </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a0d4fbd7e39e76a6d4aba5e3319ddacdb">   96</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#a0d4fbd7e39e76a6d4aba5e3319ddacdb">readLongFromStdin</a>(<span class="keywordtype">long</span> *<span class="keyword">const</span> value) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%ld&quot;</span>, value) != SCANF_ARGUMENTOS_ESPERADOS) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a>);    </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#ab8e0bec77b8a714dd27dcb65a02e317d">  109</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#ab8e0bec77b8a714dd27dcb65a02e317d">readFloatFromStdin</a>(<span class="keywordtype">float</span> *<span class="keyword">const</span> value) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%f&quot;</span>, value) != SCANF_ARGUMENTOS_ESPERADOS) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a>);    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8c.html#a15a2ca9413ca9a3f59eb08e12f5b499e">  122</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#a15a2ca9413ca9a3f59eb08e12f5b499e">readDoubleFromStdin</a>(<span class="keywordtype">double</span> *<span class="keyword">const</span> value) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">while</span> (scanf(<span class="stringliteral">&quot;%lf&quot;</span>, value) != SCANF_ARGUMENTOS_ESPERADOS) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a>);   </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#ac934f012fc7500e109dff01c43e186af">  146</a></span>&#160;     <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#ac934f012fc7500e109dff01c43e186af">readLong</a>(<span class="keywordtype">long</span> *<span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">long</span> minValue, </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">long</span> maxValue, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a0d4fbd7e39e76a6d4aba5e3319ddacdb">readLongFromStdin</a>(value);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">while</span> (*value &lt; minValue || *value &gt; maxValue) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#ad9e0b0234b3a9b40d134a1e0d629713b">MSG_LEITURA_LONG_GAMA_INVALIDA</a>, minValue, maxValue);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a0d4fbd7e39e76a6d4aba5e3319ddacdb">readLongFromStdin</a>(value);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#a2b9e39b49bea821f2d9b21d246fb560b">  173</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#a2b9e39b49bea821f2d9b21d246fb560b">readInt</a>(<span class="keywordtype">int</span> *<span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">int</span> minValue, </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> maxValue, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#acc0c93038d965dd7f51339cccc038876">readIntFromStdin</a>(value);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">while</span> (*value &lt; minValue || *value &gt; maxValue) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a9dd506a21a68e9b4b5d1c8af496e7b8e">MSG_LEITURA_INT_GAMA_INVALIDA</a>, minValue, maxValue);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#acc0c93038d965dd7f51339cccc038876">readIntFromStdin</a>(value);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#ab327a372b32428a360075ef7f081a7c0">  200</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#ab327a372b32428a360075ef7f081a7c0">readShort</a>(<span class="keywordtype">short</span> *<span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">short</span> minValue, </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">short</span> maxValue, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a>(value);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">while</span> (*value &lt; minValue || *value &gt; maxValue) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a9dd506a21a68e9b4b5d1c8af496e7b8e">MSG_LEITURA_INT_GAMA_INVALIDA</a>, minValue, maxValue);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a>(value);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#aded8225f4ccffe11e57792001a5cc5db">  227</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#aded8225f4ccffe11e57792001a5cc5db">readFloat</a>(<span class="keywordtype">float</span> *<span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">float</span> minValue, </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> maxValue, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#ab8e0bec77b8a714dd27dcb65a02e317d">readFloatFromStdin</a>(value);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">while</span> (*value &lt; minValue || *value &gt; maxValue) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a94e80adfb3ac149a05fd29b3fe3aa96d">MSG_LEITURA_REAL_GAMA_INVALIDA</a>, minValue, maxValue);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#ab8e0bec77b8a714dd27dcb65a02e317d">readFloatFromStdin</a>(value);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        </div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#a5b231df853b8497d1cdadeb26c27ccca">  254</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#a5b231df853b8497d1cdadeb26c27ccca">readDouble</a>(<span class="keywordtype">double</span> *<span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">double</span> minValue, </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> maxValue, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a15a2ca9413ca9a3f59eb08e12f5b499e">readDoubleFromStdin</a>(value);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">while</span> (*value &lt; minValue || *value &gt; maxValue) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#a94e80adfb3ac149a05fd29b3fe3aa96d">MSG_LEITURA_REAL_GAMA_INVALIDA</a>, minValue, maxValue);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a15a2ca9413ca9a3f59eb08e12f5b499e">readDoubleFromStdin</a>(value);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#aaa44330e78937ab40422cb4b123cb121">  278</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#aaa44330e78937ab40422cb4b123cb121">readChar</a>(<span class="keywordtype">char</span> *<span class="keyword">const</span> value, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) { </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        *value = getchar();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    </div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#ac58c51fb8f18fc7371f4226c78e24fe4">  304</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="_a_p_i___leitura_8c.html#ac58c51fb8f18fc7371f4226c78e24fe4">readString</a>(<span class="keywordtype">char</span> * <span class="keyword">const</span> value, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message) {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span> (fgets(value, size, stdin) != NULL) {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sTam = strlen(value) - 1;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">if</span> (value[sTam] == <a class="code" href="_a_p_i___utils_8c.html#a4184040fc33a42217f0b81663b8daefd">CAR_NOVA_LINHA</a>) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                value[sTam] = <a class="code" href="_a_p_i___utils_8c.html#acf2227809328e7d12ca39d930d59acf3">CAR_FRASE_FIM</a>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <a class="code" href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a>();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }            </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    </div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="_a_p_i___leitura_8h.html#ad77d8a5cbd0a5f839a02a73d62c84aab">  332</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="_a_p_i___leitura_8c.html#ad77d8a5cbd0a5f839a02a73d62c84aab">readBool</a>(<span class="keywordtype">bool</span> *<span class="keyword">const</span> value, <span class="keywordtype">char</span> <span class="keyword">const</span>* <span class="keyword">const</span> message){</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> minValue = 0, maxValue = 1;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordtype">short</span> temp;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <a class="code" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a>(&amp;temp);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">while</span> (temp &lt; minValue || temp &gt; maxValue) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            printf(<a class="code" href="_a_p_i___leitura_8c.html#ab8d0ef2096d87d0b1b4ce2238a194889">MSG_LEITURA_BOOLEANO_INVALIDO</a>);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a>(message);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <a class="code" href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a>(&amp;temp);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        *value = temp;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="a_a_p_i___utils_8c_html_acf2227809328e7d12ca39d930d59acf3"><div class="ttname"><a href="_a_p_i___utils_8c.html#acf2227809328e7d12ca39d930d59acf3">CAR_FRASE_FIM</a></div><div class="ttdeci">const char CAR_FRASE_FIM</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___utils_8c_source.html#l00008">API_Utils.c:8</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a15a2ca9413ca9a3f59eb08e12f5b499e"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a15a2ca9413ca9a3f59eb08e12f5b499e">readDoubleFromStdin</a></div><div class="ttdeci">void readDoubleFromStdin(double *const value)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00122">API_Leitura.c:122</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ad77d8a5cbd0a5f839a02a73d62c84aab"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ad77d8a5cbd0a5f839a02a73d62c84aab">readBool</a></div><div class="ttdeci">void readBool(bool *const value, char const *const message)</div><div class="ttdoc">Solicita um valor booleano (1 ou 0) ao utilizador.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00332">API_Leitura.c:332</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ac88ffabf45ce3957ba3c4f462e87e937"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ac88ffabf45ce3957ba3c4f462e87e937">readShortFromStdin</a></div><div class="ttdeci">void readShortFromStdin(short *const value)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00071">API_Leitura.c:71</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a5b231df853b8497d1cdadeb26c27ccca"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a5b231df853b8497d1cdadeb26c27ccca">readDouble</a></div><div class="ttdeci">void readDouble(double *const value, const double minValue, const double maxValue, char const *const message)</div><div class="ttdoc">Solicita um número real longo ao utilizador. O número introduzido pelo utilizador está entre um valor...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00254">API_Leitura.c:254</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ab8d0ef2096d87d0b1b4ce2238a194889"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ab8d0ef2096d87d0b1b4ce2238a194889">MSG_LEITURA_BOOLEANO_INVALIDO</a></div><div class="ttdeci">#define MSG_LEITURA_BOOLEANO_INVALIDO</div><div class="ttdoc">Mensagem a mostrar ao utilizador caso o número (real ou inteiro) introduzido seja inválido.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00045">API_Leitura.c:45</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_acc0c93038d965dd7f51339cccc038876"><div class="ttname"><a href="_a_p_i___leitura_8c.html#acc0c93038d965dd7f51339cccc038876">readIntFromStdin</a></div><div class="ttdeci">void readIntFromStdin(int *const value)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00084">API_Leitura.c:84</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ab8e0bec77b8a714dd27dcb65a02e317d"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ab8e0bec77b8a714dd27dcb65a02e317d">readFloatFromStdin</a></div><div class="ttdeci">void readFloatFromStdin(float *const value)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00109">API_Leitura.c:109</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ad9e0b0234b3a9b40d134a1e0d629713b"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ad9e0b0234b3a9b40d134a1e0d629713b">MSG_LEITURA_LONG_GAMA_INVALIDA</a></div><div class="ttdeci">#define MSG_LEITURA_LONG_GAMA_INVALIDA</div><div class="ttdoc">Mensagem a mostrar ao utilizador caso o número inteiro introduzido nao respeite o limite inicial e fi...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00029">API_Leitura.c:29</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a2b9e39b49bea821f2d9b21d246fb560b"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a2b9e39b49bea821f2d9b21d246fb560b">readInt</a></div><div class="ttdeci">void readInt(int *const value, const int minValue, const int maxValue, char const *const message)</div><div class="ttdoc">Solicita um número inteiro ao utilizador. O número introduzido pelo utilizador está entre um valor mí...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00173">API_Leitura.c:173</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a3edbbe93033eed93d1e5d21f9d5838a5"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a3edbbe93033eed93d1e5d21f9d5838a5">displayMessage</a></div><div class="ttdeci">void displayMessage(char const *const message)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00063">API_Leitura.c:63</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ac934f012fc7500e109dff01c43e186af"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ac934f012fc7500e109dff01c43e186af">readLong</a></div><div class="ttdeci">void readLong(long *const value, const long minValue, const long maxValue, char const *const message)</div><div class="ttdoc">Solicita um número inteiro longo ao utilizador. O número introduzido pelo utilizador está entre um va...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00146">API_Leitura.c:146</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_aaa44330e78937ab40422cb4b123cb121"><div class="ttname"><a href="_a_p_i___leitura_8c.html#aaa44330e78937ab40422cb4b123cb121">readChar</a></div><div class="ttdeci">void readChar(char *const value, char const *const message)</div><div class="ttdoc">Solicita um caracter ao utilizador.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00278">API_Leitura.c:278</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a39acd0103c4f8dde719d4836733a44ff"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a39acd0103c4f8dde719d4836733a44ff">MSG_LEITURA_NUMERO_INVALIDO</a></div><div class="ttdeci">#define MSG_LEITURA_NUMERO_INVALIDO</div><div class="ttdoc">Mensagem a mostrar ao utilizador caso o número (real ou inteiro) introduzido seja inválido.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00039">API_Leitura.c:39</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a9dd506a21a68e9b4b5d1c8af496e7b8e"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a9dd506a21a68e9b4b5d1c8af496e7b8e">MSG_LEITURA_INT_GAMA_INVALIDA</a></div><div class="ttdeci">#define MSG_LEITURA_INT_GAMA_INVALIDA</div><div class="ttdoc">Mensagem a mostrar ao utilizador caso o número inteiro introduzido nao respeite o limite inicial e fi...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00024">API_Leitura.c:24</a></div></div>
+<div class="ttc" id="a_a_p_i___utils_8h_html"><div class="ttname"><a href="_a_p_i___utils_8h.html">API_Utils.h</a></div><div class="ttdoc">Biblioteca para operações diversas.</div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ab327a372b32428a360075ef7f081a7c0"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ab327a372b32428a360075ef7f081a7c0">readShort</a></div><div class="ttdeci">void readShort(short *const value, const short minValue, const short maxValue, char const *const message)</div><div class="ttdoc">Solicita um número inteiro pequeno ao utilizador. O número introduzido pelo utilizador está entre um ...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00200">API_Leitura.c:200</a></div></div>
+<div class="ttc" id="a_a_p_i___utils_8c_html_a4184040fc33a42217f0b81663b8daefd"><div class="ttname"><a href="_a_p_i___utils_8c.html#a4184040fc33a42217f0b81663b8daefd">CAR_NOVA_LINHA</a></div><div class="ttdeci">const char CAR_NOVA_LINHA</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___utils_8c_source.html#l00007">API_Utils.c:7</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_ac58c51fb8f18fc7371f4226c78e24fe4"><div class="ttname"><a href="_a_p_i___leitura_8c.html#ac58c51fb8f18fc7371f4226c78e24fe4">readString</a></div><div class="ttdeci">bool readString(char *const value, const unsigned int size, char const *const message)</div><div class="ttdoc">Lê uma cadeia de caracteres (string) através da stream stdin.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00304">API_Leitura.c:304</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a94e80adfb3ac149a05fd29b3fe3aa96d"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a94e80adfb3ac149a05fd29b3fe3aa96d">MSG_LEITURA_REAL_GAMA_INVALIDA</a></div><div class="ttdeci">#define MSG_LEITURA_REAL_GAMA_INVALIDA</div><div class="ttdoc">Mensagem a informar o utilizador caso o número real introduzido nao respeite o limite inicial e final...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00034">API_Leitura.c:34</a></div></div>
+<div class="ttc" id="a_a_p_i___utils_8c_html_a11ac4d3ec555747d95fee8ae7aa18b5d"><div class="ttname"><a href="_a_p_i___utils_8c.html#a11ac4d3ec555747d95fee8ae7aa18b5d">cleanInputBuffer</a></div><div class="ttdeci">void cleanInputBuffer()</div><div class="ttdoc">Limpa o buffer de entrada de dados.</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___utils_8c_source.html#l00023">API_Utils.c:23</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_aded8225f4ccffe11e57792001a5cc5db"><div class="ttname"><a href="_a_p_i___leitura_8c.html#aded8225f4ccffe11e57792001a5cc5db">readFloat</a></div><div class="ttdeci">void readFloat(float *const value, const float minValue, const float maxValue, char const *const message)</div><div class="ttdoc">Solicita um número real pequeno ao utilizador. O número introduzido pelo utilizador está entre um val...</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00227">API_Leitura.c:227</a></div></div>
+<div class="ttc" id="a_a_p_i___leitura_8c_html_a0d4fbd7e39e76a6d4aba5e3319ddacdb"><div class="ttname"><a href="_a_p_i___leitura_8c.html#a0d4fbd7e39e76a6d4aba5e3319ddacdb">readLongFromStdin</a></div><div class="ttdeci">void readLongFromStdin(long *const value)</div><div class="ttdef"><b>Definition:</b> <a href="_a_p_i___leitura_8c_source.html#l00096">API_Leitura.c:96</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b590c8b0a6859667c804cf3dafc2b7a6.html">API_Leitura</a></li><li class="navelem"><a class="el" href="_a_p_i___leitura_8c.html">API_Leitura.c</a></li>
+    <li class="footer">Gerado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

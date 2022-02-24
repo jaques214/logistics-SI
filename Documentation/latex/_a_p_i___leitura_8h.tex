@@ -1,0 +1,267 @@
+\hypertarget{_a_p_i___leitura_8h}{}\doxysection{Referência ao ficheiro A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.h}
+\label{_a_p_i___leitura_8h}\index{API\_Leitura/API\_Leitura.h@{API\_Leitura/API\_Leitura.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_ab327a372b32428a360075ef7f081a7c0}{read\+Short}} (short $\ast$const value, const short min\+Value, const short max\+Value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um número inteiro pequeno ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_a2b9e39b49bea821f2d9b21d246fb560b}{read\+Int}} (int $\ast$const value, const int min\+Value, const int max\+Value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um número inteiro ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_ac934f012fc7500e109dff01c43e186af}{read\+Long}} (long $\ast$const value, const long min\+Value, const long max\+Value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um número inteiro longo ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_aded8225f4ccffe11e57792001a5cc5db}{read\+Float}} (float $\ast$const value, const float min\+Value, const float max\+Value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um número real pequeno ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_a5b231df853b8497d1cdadeb26c27ccca}{read\+Double}} (double $\ast$const value, const double min\+Value, const double max\+Value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um número real longo ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_aaa44330e78937ab40422cb4b123cb121}{read\+Char}} (char $\ast$const value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um caracter ao utilizador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_p_i___leitura_8h_ac58c51fb8f18fc7371f4226c78e24fe4}{read\+String}} (char $\ast$const value, const unsigned int size, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Lê uma cadeia de caracteres (string) através da stream stdin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_i___leitura_8h_ad77d8a5cbd0a5f839a02a73d62c84aab}{read\+Bool}} (bool $\ast$const value, char const $\ast$const message)
+\begin{DoxyCompactList}\small\item\em Solicita um valor booleano (1 ou 0) ao utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{_a_p_i___leitura_8h_ad77d8a5cbd0a5f839a02a73d62c84aab}\label{_a_p_i___leitura_8h_ad77d8a5cbd0a5f839a02a73d62c84aab}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readBool@{readBool}}
+\index{readBool@{readBool}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readBool()}{readBool()}}
+{\footnotesize\ttfamily void read\+Bool (\begin{DoxyParamCaption}\item[{bool $\ast$const}]{value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um valor booleano (1 ou 0) ao utilizador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} estado;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_ad77d8a5cbd0a5f839a02a73d62c84aab}{readBool}}(\&estado, \textcolor{stringliteral}{"Introduza o estado do aluno (0/1): "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 332 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_aaa44330e78937ab40422cb4b123cb121}\label{_a_p_i___leitura_8h_aaa44330e78937ab40422cb4b123cb121}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readChar@{readChar}}
+\index{readChar@{readChar}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readChar()}{readChar()}}
+{\footnotesize\ttfamily void read\+Char (\begin{DoxyParamCaption}\item[{char $\ast$const}]{value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um caracter ao utilizador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} genero;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_aaa44330e78937ab40422cb4b123cb121}{readChar}}(\&genero, \textcolor{stringliteral}{"Introduza o genero do aluno (M/F): "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 278 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_a5b231df853b8497d1cdadeb26c27ccca}\label{_a_p_i___leitura_8h_a5b231df853b8497d1cdadeb26c27ccca}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readDouble@{readDouble}}
+\index{readDouble@{readDouble}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readDouble()}{readDouble()}}
+{\footnotesize\ttfamily void read\+Double (\begin{DoxyParamCaption}\item[{double $\ast$const}]{value,  }\item[{const double}]{min\+Value,  }\item[{const double}]{max\+Value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um número real longo ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em min\+Value} & O valor mínimo permitido. \\
+\hline
+{\em max\+Value} & O valor máximo permitido. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} num;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_a5b231df853b8497d1cdadeb26c27ccca}{readDouble}}(\&num, 0.0, 999.99, \textcolor{stringliteral}{"Introduza um numero entre 0.0 e 999.99: "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 254 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_aded8225f4ccffe11e57792001a5cc5db}\label{_a_p_i___leitura_8h_aded8225f4ccffe11e57792001a5cc5db}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readFloat@{readFloat}}
+\index{readFloat@{readFloat}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readFloat()}{readFloat()}}
+{\footnotesize\ttfamily void read\+Float (\begin{DoxyParamCaption}\item[{float $\ast$const}]{value,  }\item[{const float}]{min\+Value,  }\item[{const float}]{max\+Value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um número real pequeno ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em min\+Value} & O valor mínimo permitido. \\
+\hline
+{\em max\+Value} & O valor máximo permitido. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{floar num;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_aded8225f4ccffe11e57792001a5cc5db}{readFloat}}(\&num, 10.0, 999.99, \textcolor{stringliteral}{"Introduza um numero entre 10.0 e 999.99: "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 227 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_a2b9e39b49bea821f2d9b21d246fb560b}\label{_a_p_i___leitura_8h_a2b9e39b49bea821f2d9b21d246fb560b}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readInt@{readInt}}
+\index{readInt@{readInt}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readInt()}{readInt()}}
+{\footnotesize\ttfamily void read\+Int (\begin{DoxyParamCaption}\item[{int $\ast$const}]{value,  }\item[{const int}]{min\+Value,  }\item[{const int}]{max\+Value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um número inteiro ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em min\+Value} & O valor mínimo permitido. \\
+\hline
+{\em max\+Value} & O valor máximo permitido. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_ab327a372b32428a360075ef7f081a7c0}{readShort}}(\&num, 0, 200, \textcolor{stringliteral}{"Introduza um numero entre 0 e 200: "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 173 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_ac934f012fc7500e109dff01c43e186af}\label{_a_p_i___leitura_8h_ac934f012fc7500e109dff01c43e186af}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readLong@{readLong}}
+\index{readLong@{readLong}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readLong()}{readLong()}}
+{\footnotesize\ttfamily void read\+Long (\begin{DoxyParamCaption}\item[{long $\ast$const}]{value,  }\item[{const long}]{min\+Value,  }\item[{const long}]{max\+Value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um número inteiro longo ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em min\+Value} & O valor mínimo permitido. \\
+\hline
+{\em max\+Value} & O valor máximo permitido. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} num;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_ac934f012fc7500e109dff01c43e186af}{readLong}}(\&num, 0, 1000, \textcolor{stringliteral}{"Introduza um numero entre 0 e 1000: "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 146 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_ab327a372b32428a360075ef7f081a7c0}\label{_a_p_i___leitura_8h_ab327a372b32428a360075ef7f081a7c0}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readShort@{readShort}}
+\index{readShort@{readShort}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readShort()}{readShort()}}
+{\footnotesize\ttfamily void read\+Short (\begin{DoxyParamCaption}\item[{short $\ast$const}]{value,  }\item[{const short}]{min\+Value,  }\item[{const short}]{max\+Value,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Solicita um número inteiro pequeno ao utilizador. O número introduzido pelo utilizador está entre um valor mínimo e máximo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & A referência (endereço de memória) onde o valor lido sera armazenado. \\
+\hline
+{\em min\+Value} & O valor mínimo permitido. \\
+\hline
+{\em max\+Value} & O valor máximo permitido. \\
+\hline
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} num;}
+\DoxyCodeLine{\mbox{\hyperlink{_a_p_i___leitura_8c_ab327a372b32428a360075ef7f081a7c0}{readShort}}(\&num, 0, 200, \textcolor{stringliteral}{"Introduza um numero entre 0 e 200: "});}
+\end{DoxyCode}
+ 
+
+Definido na linha 200 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+
+\mbox{\Hypertarget{_a_p_i___leitura_8h_ac58c51fb8f18fc7371f4226c78e24fe4}\label{_a_p_i___leitura_8h_ac58c51fb8f18fc7371f4226c78e24fe4}} 
+\index{API\_Leitura.h@{API\_Leitura.h}!readString@{readString}}
+\index{readString@{readString}!API\_Leitura.h@{API\_Leitura.h}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}}
+{\footnotesize\ttfamily bool read\+String (\begin{DoxyParamCaption}\item[{char $\ast$const}]{value,  }\item[{const unsigned int}]{size,  }\item[{char const $\ast$const}]{message }\end{DoxyParamCaption})}
+
+
+
+Lê uma cadeia de caracteres (string) através da stream stdin. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & -\/ Apontador para a frase lida. \\
+\hline
+{\em size} & -\/ Tamanho máximo da frase a ser lida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Aviso}
+\+: O tamanho da frase deve ter em conta o espaço para o carácter de término da string (\textquotesingle{}\textbackslash{}0\textquotesingle{}) 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parâmetros}
+{\em message} & A mensagem a mostrar ao utilizador\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+1 em caso de leitura com sucesso, 0 caso ocorra um erro.
+\end{DoxyReturn}
+Exemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} \mbox{\hyperlink{struct_cliente_a98d1020886290eaec630d2cac2ef6d40}{nome}}[100 + 1];}
+\DoxyCodeLine{}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"Introduza o seu nome: "});}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (lerFrase (\mbox{\hyperlink{struct_cliente_a98d1020886290eaec630d2cac2ef6d40}{nome}}, 100 + 1) == 1)}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"O nome lido e: \%s"}, \mbox{\hyperlink{struct_cliente_a98d1020886290eaec630d2cac2ef6d40}{nome}});}
+\end{DoxyCode}
+ 
+
+Definido na linha 304 do ficheiro A\+P\+I\+\_\+\+Leitura.\+c.
+

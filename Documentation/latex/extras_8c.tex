@@ -1,0 +1,79 @@
+\hypertarget{extras_8c}{}\doxysection{Referência ao ficheiro My\+Libs/extras.c}
+\label{extras_8c}\index{MyLibs/extras.c@{MyLibs/extras.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+utilizadores.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}extras.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{extras_8c_afe6a51f5a1b18463461d4a4fab5af7d7}{relatorio\+Anual}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, int nif, int ano)
+\item 
+void \mbox{\hyperlink{extras_8c_a731851139b713987e0eff65b0cf33fd7}{relatorio\+Diario}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, int nif, int ano, int mes, int dia)
+\item 
+void \mbox{\hyperlink{extras_8c_a58bfa5da5b3a5b11a74cff251f9bc697}{melhor\+\_\+pior\+Cliente}} (struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$ap\+\_\+encomendas, int n\+Encomendas, struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$ap\+\_\+clientes, int n\+Elementos, int ano)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{extras_8c_a58bfa5da5b3a5b11a74cff251f9bc697}\label{extras_8c_a58bfa5da5b3a5b11a74cff251f9bc697}} 
+\index{extras.c@{extras.c}!melhor\_piorCliente@{melhor\_piorCliente}}
+\index{melhor\_piorCliente@{melhor\_piorCliente}!extras.c@{extras.c}}
+\doxysubsubsection{\texorpdfstring{melhor\_piorCliente()}{melhor\_piorCliente()}}
+{\footnotesize\ttfamily void melhor\+\_\+pior\+Cliente (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{struct \mbox{\hyperlink{struct_cliente}{Cliente}} $\ast$}]{ap\+\_\+clientes,  }\item[{int}]{n\+Elementos,  }\item[{int}]{ano }\end{DoxyParamCaption})}
+
+
+
+Definido na linha 223 do ficheiro extras.\+c.
+
+\mbox{\Hypertarget{extras_8c_afe6a51f5a1b18463461d4a4fab5af7d7}\label{extras_8c_afe6a51f5a1b18463461d4a4fab5af7d7}} 
+\index{extras.c@{extras.c}!relatorioAnual@{relatorioAnual}}
+\index{relatorioAnual@{relatorioAnual}!extras.c@{extras.c}}
+\doxysubsubsection{\texorpdfstring{relatorioAnual()}{relatorioAnual()}}
+{\footnotesize\ttfamily void relatorio\+Anual (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nif,  }\item[{int}]{ano }\end{DoxyParamCaption})}
+
+Mostra o relatório anual das encomendas expedidas
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em n\+Encomendas} & nº de encomendas no array \\
+\hline
+{\em nif} & identificador do cliente, que efetuou a encomenda \\
+\hline
+{\em ano} & ano registado na data/hora de envio da encomenda expedida \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 21 do ficheiro extras.\+c.
+
+\mbox{\Hypertarget{extras_8c_a731851139b713987e0eff65b0cf33fd7}\label{extras_8c_a731851139b713987e0eff65b0cf33fd7}} 
+\index{extras.c@{extras.c}!relatorioDiario@{relatorioDiario}}
+\index{relatorioDiario@{relatorioDiario}!extras.c@{extras.c}}
+\doxysubsubsection{\texorpdfstring{relatorioDiario()}{relatorioDiario()}}
+{\footnotesize\ttfamily void relatorio\+Diario (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_encomenda}{Encomenda}} $\ast$}]{ap\+\_\+encomendas,  }\item[{int}]{n\+Encomendas,  }\item[{int}]{nif,  }\item[{int}]{ano,  }\item[{int}]{mes,  }\item[{int}]{dia }\end{DoxyParamCaption})}
+
+Mostra o relatório diário do nº de encomendas adiconados por um dado cliente
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ap\+\_\+encomendas} & array/apontador de encomendas \\
+\hline
+{\em n\+Encomendas} & nº de encomendas no array \\
+\hline
+{\em nif} & identificador do cliente, que efetuou a encomenda \\
+\hline
+{\em ano} & ano registado na data/hora de envio da encomenda expedida \\
+\hline
+{\em mes} & \\
+\hline
+{\em dia} & \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 126 do ficheiro extras.\+c.
+

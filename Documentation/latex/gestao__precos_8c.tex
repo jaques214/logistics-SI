@@ -1,0 +1,88 @@
+\hypertarget{gestao__precos_8c}{}\doxysection{Referência ao ficheiro My\+Libs/gestao\+\_\+precos.c}
+\label{gestao__precos_8c}\index{MyLibs/gestao\_precos.c@{MyLibs/gestao\_precos.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+A\+P\+I\+\_\+\+Leitura/\+A\+P\+I\+\_\+\+Leitura.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gestao\+\_\+utilizadores.\+h\char`\"{}}\newline
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gestao__precos_8c_a77ccbc3155e6c199cce420d5e23ce639}{guardar\+Dados\+Preco}} (struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__precos_8c_ac8e748256c8fd762ff99236f354fef1e}{carregar\+Dados\+Preco}} (struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__precos_8c_a8c828035d67c899ec528c992890af718}{mudar\+Precos}} (struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\item 
+void \mbox{\hyperlink{gestao__precos_8c_ad1ba5ff58445403122062b0768af0f69}{consultar\+Precos}} (struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$precos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{gestao__precos_8c_ac8e748256c8fd762ff99236f354fef1e}\label{gestao__precos_8c_ac8e748256c8fd762ff99236f354fef1e}} 
+\index{gestao\_precos.c@{gestao\_precos.c}!carregarDadosPreco@{carregarDadosPreco}}
+\index{carregarDadosPreco@{carregarDadosPreco}!gestao\_precos.c@{gestao\_precos.c}}
+\doxysubsubsection{\texorpdfstring{carregarDadosPreco()}{carregarDadosPreco()}}
+{\footnotesize\ttfamily void carregar\+Dados\+Preco (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Lê dados de um ficheiro (se existir) e preenche a lista de preços
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 37 do ficheiro gestao\+\_\+precos.\+c.
+
+\mbox{\Hypertarget{gestao__precos_8c_ad1ba5ff58445403122062b0768af0f69}\label{gestao__precos_8c_ad1ba5ff58445403122062b0768af0f69}} 
+\index{gestao\_precos.c@{gestao\_precos.c}!consultarPrecos@{consultarPrecos}}
+\index{consultarPrecos@{consultarPrecos}!gestao\_precos.c@{gestao\_precos.c}}
+\doxysubsubsection{\texorpdfstring{consultarPrecos()}{consultarPrecos()}}
+{\footnotesize\ttfamily void consultar\+Precos (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Consulta os preços inseridos e organiza-\/os numa tabela de preços (matriz)
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 83 do ficheiro gestao\+\_\+precos.\+c.
+
+\mbox{\Hypertarget{gestao__precos_8c_a77ccbc3155e6c199cce420d5e23ce639}\label{gestao__precos_8c_a77ccbc3155e6c199cce420d5e23ce639}} 
+\index{gestao\_precos.c@{gestao\_precos.c}!guardarDadosPreco@{guardarDadosPreco}}
+\index{guardarDadosPreco@{guardarDadosPreco}!gestao\_precos.c@{gestao\_precos.c}}
+\doxysubsubsection{\texorpdfstring{guardarDadosPreco()}{guardarDadosPreco()}}
+{\footnotesize\ttfamily void guardar\+Dados\+Preco (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Escreve o conteúdo da lista de precos em ficheiro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 17 do ficheiro gestao\+\_\+precos.\+c.
+
+\mbox{\Hypertarget{gestao__precos_8c_a8c828035d67c899ec528c992890af718}\label{gestao__precos_8c_a8c828035d67c899ec528c992890af718}} 
+\index{gestao\_precos.c@{gestao\_precos.c}!mudarPrecos@{mudarPrecos}}
+\index{mudarPrecos@{mudarPrecos}!gestao\_precos.c@{gestao\_precos.c}}
+\doxysubsubsection{\texorpdfstring{mudarPrecos()}{mudarPrecos()}}
+{\footnotesize\ttfamily void mudar\+Precos (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_preco}{Preco}} $\ast$}]{precos }\end{DoxyParamCaption})}
+
+Adiciona os preços utilizados no cálculo do custo total
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em precos} & apontador para a estrutura de dados \mbox{\hyperlink{struct_preco}{Preco}} \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 62 do ficheiro gestao\+\_\+precos.\+c.
+
